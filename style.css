@@ -1,0 +1,102 @@
+:root{
+    --primary-color: rgba(17,86,102);
+    --primary-color-darker: rgba(9,48,56);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
+
+#container{
+    max-width: 50%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.2rem;
+}
+
+h3{
+    font-size: 1rem
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+.table{
+    width: 100%;
+    height:50%;
+    position: relative;
+}
+
+.table-imc{
+    position: relative;
+    width: 16rem;
+    float: left;
+}
+
+.table-result{
+    position: relative;
+    top: 1.2rem;
+    left: 30%;
+    margin-bottom: 2rem;
+}
+
+.calc-imc{
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+form input, form label, form button{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input{
+    font-size: 24px;
+    height: 3rem;
+    padding: 0 1px;
+}
+
+form input:focus{
+    outline: 1px solid var(--primary-color);
+}
+
+form button{
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 700;
+    height: 50px;
+    cursor: pointer;
+    transition: brightness 2.5s;
+}
+
+form button:hover{
+    filter: brightness(90%)
+    /* background: var(--primary-color-darker) */
+}
+
+#result{
+    background-color: #3EEB88;
+    padding: 1px 0 1px 10px;
+    color: rgb(30, 116, 33);
+    font-family: 'Open sans', sans-serif;
+}
