@@ -7,7 +7,7 @@ function calc_imc(event){
     var resultado = document.querySelector("#total")
     var total
     
-    total = peso / Math.pow(altura, 2)
+    total = (peso / Math.pow(altura, 2)).toFixed(2)
     
     if(total < 18.5){
         resultado.innerHTML = `O seu IMC é: ${total}. Cuidado, você está abaixo o peso`
@@ -33,15 +33,41 @@ function calc_imc(event){
 function show_result(){
     var peso = document.querySelector('#peso').value
     var altura = document.querySelector("#altura").value
+    var campo = document.querySelector('#result')
+
     if(peso == '' && altura == ''){
-        document.querySelector("#result").style.display = "none";
+        campo.style.display = "none";
+    }
+    else if(peso == ''){
+        campo.style.display = "none";
+        alert('Insira o seu peso para calcular o IMC')
+    }
+    else if(altura = ''){
+        campo.style.display = "none";
+        alert('Insira a sua altura para calcular o IMC')
     }
     else{
-        document.querySelector("#result").style.display = "block"
+        campo.style.display = "block"
     }
 }
 
-function input_number(){
-    
+function input_number(num){
+    var number = /[^0-9.]/
+    var campo = num
+
+    var alert = document.querySelector("#result")
+    var aviso = document.querySelector("#total")
+    number.lastIndex = 0
+    if(number.test(campo.value)){
+        alert.style.display = 'block'
+        alert.style.backgroundColor = "#D9534F"
+        alert.style.color = "rgb(126, 44, 44)"
+        aviso.innerHTML = "Insira um valor número"
+    }
+    else{
+        alert.style.backgroundColor = "#3EEB88"
+        alert.style.color = "rgb(30, 116, 33)"
+        aviso.innerHTML = ''
+    }
 }
 

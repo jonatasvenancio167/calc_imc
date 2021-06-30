@@ -39,8 +39,8 @@
         <section>
             <h2 class="calc-imc" >Calcule o seu IMC</h2>
             <form>
-                <input type="text" id="peso" placeholder="Peso">
-                <input type="text" id="altura" placeholder="Altura" >
+                <input type="text" id="peso" onkeyup="input_number(this)" placeholder="Peso">
+                <input type="text" id="altura" onkeyup="input_number(this)" placeholder="Altura" >
                 <button onclick="calc_imc(event)">Calcular</button>
             </form>
         </section>
