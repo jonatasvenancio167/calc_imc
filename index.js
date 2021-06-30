@@ -42,7 +42,7 @@ function show_result(){
         campo.style.display = "none";
         alert('Insira o seu peso para calcular o IMC')
     }
-    else if(altura = ''){
+    else if(altura == ''){
         campo.style.display = "none";
         alert('Insira a sua altura para calcular o IMC')
     }
@@ -70,4 +70,3 @@ function input_number(num){
         aviso.innerHTML = ''
     }
 }
-
